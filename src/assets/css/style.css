@@ -1,0 +1,201 @@
+:root {
+    --color-principal: var(--color-shilling);
+    --color-principal-oscuro: var(--color-shilling-oscuro);
+    --color-texto: rgb(34, 34, 34);
+    --color-bg-opacity: rgba(43, 43, 43, 0.575);
+    --color-texto-opacity: rgba(3, 3, 3, 0.781);
+    --color-blanco: rgb(255, 255, 255);
+    --color-blanco-opacity: rgba(255, 255, 255, 0.404);
+    --color-shilling: #ce142b;
+    --color-shilling-oscuro: rgb(176, 22, 48);
+    --color-bg-claro: rgb(250, 250, 250);
+    --color-gris-claro: rgb(200, 200, 200);
+    --color-placeholder: rgb(148, 148, 148);   
+    --color-hover: #f1f1f1;
+    --color-info: #165FF2;
+    --color-hover-icon: rgba(255, 255, 255, 0.75);
+    --box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+    --box-shadow-dow: 0 4px 6px -2px rgba(0, 0, 0, .16), 0 2px 6px -2px rgba(0, 0, 0, .16);
+    --font: 'Poppins', Helvetica, Arial, Sans-Serif;    
+    --border-radius: 5px;
+    --border:1px solid #eaeaea;    
+    --border-oscuro:1px solid rgb(148, 148, 148);
+    --color-border: #eaeaea;
+    --color-verde: #00ad00;
+    --color-verde-oscuro: #006400;
+    --color-verde-pastel:#09BD9B;
+    --color-verde-pastel-oscuro:#008d73;
+    --color-war:  #eebb03;
+    --color-gris-oscuro: #333D46;
+    --color-bg-menu:#65696d;
+    --color-azul-empresa: #0073B1;
+    --color-azul-empresa-oscuro: #003653;
+  }
+
+body{
+    font-family: var(--font);
+    
+}
+  
+#root{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em 1fr 2em;
+    min-height: 100vh;
+}
+p{
+    margin: 0;
+}
+header{
+    background-color: var(--color-azul-empresa);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header p{
+  margin: 0;
+  color: var(--color-blanco);
+  font-size: 1.5em;
+}
+footer{
+    background-color: var(--color-azul-empresa);
+    color: var(--color-blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.card {  
+    background-color:var(--color-blanco); 
+    border: none;
+    box-shadow: var(--box-shadow-dow);
+   
+}
+.card-body {
+    padding: 10px;
+  }
+
+.card-body p{
+  text-align: center;
+}
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color:var(--color-blanco);
+    border-top: none;
+}
+.btn-danger {
+    color: #fff;
+    background-color: var(--color-azul-empresa);
+    border-color: var(--color-azul-empresa);
+    transition:all .5s ease;
+}
+.btn-danger:hover {
+    background-color: var(--color-texto);
+    border-color: var(--color-texto);
+}
+.btn-primary {
+    color: #fff;
+    background-color: var(--color-azul-empresa);
+    border-color: var(--color-azul-empresa);
+    transition:all .5s ease;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {  
+    background-color: var(--color-texto);
+    border-color: var(--color-texto);
+    box-shadow: none;
+}
+img {
+    
+    object-fit: cover;
+    height: 200px;
+}
+
+
+div .form-control:focus {
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+    border-color: var(--color-texto);
+    outline: 0;
+    box-shadow: none;
+}
+i{
+    color: var(--color-verde-pastel);
+}
+.main-paginador{
+    overflow-y: auto;
+    max-height: calc(100vh - 232px);
+}
+.main-paginador button{
+    background-color: var(--color-blanco);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: var(--color-texto);
+    transition: all .5s ease;
+}
+
+.main-paginador button i{
+    color: var(--color-texto);
+    
+}
+.container{
+   /* overflow-y: auto; */
+   height: calc(100vh - 5em);
+}
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 40px;
+    background-color: var(--color-blanco);
+    border-radius: .3rem;
+    position: relative;
+}
+.form-group {
+    margin-bottom: 0;
+}
+.error{
+    position: absolute;
+    
+}
+/* Estilos para barra de scroll Webkit y blink (Chrome, Safari, Opera... )*/
+
+.scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  .scroll::-webkit-scrollbar:vertical {
+    width:10px;
+  }
+  
+  
+  .scroll::-webkit-scrollbar:horizontal {
+    height: 0;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: var(--color-texto);
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    border-radius: 10px;  
+  }
+  /* Estilos para barra de scroll firefox*/
+  .scroll{
+  scrollbar-color: var(--color-azul-empresa) transparent;
+  scrollbar-width: thin;
+  }
+  
+  @media screen and (max-width: 768px) {
+
+    .main-paginador {
+        
+        max-height: calc(100vh - 300px);
+    }
+    .input-buscador{
+        margin-bottom: 1em;
+    }
+
+  }
